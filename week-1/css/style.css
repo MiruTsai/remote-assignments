@@ -52,6 +52,13 @@ a:hover{
     right:1rem;
     display:none;
 }
+.footer{
+    width:12.5rem;
+    background: lightblue;
+    text-align: center;
+    padding:1rem;
+    margin: auto;
+}
 
 
 /* flex box */
