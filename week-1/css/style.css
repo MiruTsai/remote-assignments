@@ -19,7 +19,7 @@ body{
 .title{
     margin: 0;
     padding-left:1rem;
-}
+    }
 .welcome{
     background: lightblue;
     padding:2rem 0;
@@ -86,11 +86,12 @@ a:hover{
 .row{
     display: flex;
     flex-direction: column;
+    justify-content: stretch;   
     }
 .content{
-    vertical-align: top;
-    text-align: center;    
-}
+    text-align: center;
+    }
+
 /* media queries */
 @media (max-width:799px){
     .main-nav{
