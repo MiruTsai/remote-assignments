@@ -1,0 +1,101 @@
+/* ------------------------- */
+* {
+    box-sizing:border-box;
+}
+
+/* base layout */
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+.main-header{
+    background: lightgray;
+}
+
+.title{
+    position:relative;
+    padding-left: 10px;
+}
+.logo{
+    position: absolute;
+    left:5em;
+}
+.menu{
+    height:37px;
+    position: absolute;
+    display: none;
+ }
+
+.main-header,
+.container{
+    padding:0 1em;
+    margin:auto;
+}
+
+.welcome{
+    text-align: center;
+    background: lightblue;
+    padding:3em 0;
+}
+h2{
+    text-align: center;
+    margin-top:30px;
+}
+.main-nav li{
+    text-decoration: none;
+    list-style: none;
+    padding-right:1em;
+    font-size:1.5em;
+}
+
+.row{
+    width:100%;
+    max-width:33.5rem;
+    background: lightgray;
+    padding:1em 1em;
+    margin:1em;
+}
+/* flex box */
+.main-header,
+.main-nav,
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+.container{
+    max-width: 1200px;
+    }
+.row{
+    flex:1 50%;
+}
+.row{
+    display: flex;
+    flex-direction: column
+}
+.content{
+    vertical-align: top;
+}
+/* ---media query--- */
+@media (max-width:1159) and (min-width:799){
+    .row{
+        width: 90%;
+    }
+}
+@media (max-width:499px){
+    .main-nav{
+        display:none;
+    }
+    .container{
+        flex-direction: column;
+        margin:0;
+        padding:0;
+        }
+    .menu{
+        display:inline-block;
+    }
+    .row{
+        width:100%;
+        margin:1rem 1rem;
+    }
+}
