@@ -1,101 +1,99 @@
-/* ------------------------- */
-* {
-    box-sizing:border-box;
+*{
+    box-sizing: border-box;
+    list-style: none;
 }
-
-/* base layout */
+/*------------------*/ 
 body{
-    margin: 0 auto;
-    text-align: center;
-}
+    margin:0 auto;
+   }
 .main-header{
-    background: lightgray;
-}
-
-.title{
-    position:relative;
-    padding-left: 10px;
-}
-.logo{
-    position: absolute;
-    left:5em;
-}
-.menu{
-    height:37px;
-    position: absolute;
-    display: none;
- }
-
-.main-header,
-.container{
-    padding:0 1em;
-    margin:auto;
-}
-
-.welcome{
-    text-align: center;
-    background: lightblue;
-    padding:3em 0;
-}
-h2{
-    text-align: center;
-    margin-top:30px;
+    padding:1.5rem 1rem;
+    background: lightgrey;
+    position: relative; 
 }
 .main-nav li{
-    text-decoration: none;
-    list-style: none;
-    padding-right:1em;
-    font-size:1.5em;
+    font-size:1.5rem;
+    color: black;
+    margin-right:10px;
+}
+.title{
+    margin: 0;
+    padding-left:1rem;
+}
+.welcome{
+    background: lightblue;
+    padding:2rem 0;
+}
+.welcome,
+.name{
+    text-align: center;
 }
 
-.row{
-    width:100%;
-    max-width:33.5rem;
-    background: lightgray;
-    padding:1em 1em;
-    margin:1em;
+
+a {
+   text-decoration: none;
 }
+a:link{
+    color:black;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+    color:yellow;
+}
+
+.logo{
+    position:absolute;
+    left:7rem;
+    }
+.menu{
+    position: absolute;
+    right:1rem;
+    display:none;
+}
+
+
 /* flex box */
 .main-header,
-.main-nav,
-.container{
+.main-nav{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    }
-.container{
-    max-width: 1200px;
-    }
-.row{
-    flex:1 50%;
 }
+
+.container{
+    margin:1rem auto;
+    max-width:1200px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.row{    
+    flex:1 50%;
+    }
+.row div{
+    margin: 10px;
+    padding:30px;
+    background: lightgrey; 
+    
+    }
 .row{
     display: flex;
-    flex-direction: column
-}
+    flex-direction: column;
+    }
 .content{
     vertical-align: top;
+    text-align: center;    
 }
-/* ---media query--- */
-@media (max-width:1159) and (min-width:799){
-    .row{
-        width: 90%;
-    }
-}
-@media (max-width:499px){
+
+@media (max-width:499px) {
     .main-nav{
         display:none;
     }
-    .container{
-        flex-direction: column;
-        margin:0;
-        padding:0;
-        }
     .menu{
         display:inline-block;
     }
-    .row{
-        width:100%;
-        margin:1rem 1rem;
+    .container{
+        flex-direction: column;
     }
+    
 }
