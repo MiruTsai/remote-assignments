@@ -84,14 +84,18 @@ a:hover{
     vertical-align: top;
     text-align: center;    
 }
-
-@media (max-width:499px) {
+/* media queries */
+@media (max-width:799px){
     .main-nav{
         display:none;
     }
     .menu{
         display:inline-block;
     }
+}
+
+@media (max-width:499px) {
+    
     .container{
         flex-direction: column;
     }
