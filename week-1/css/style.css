@@ -6,8 +6,8 @@
 body{
     margin:0 auto;
    }
-.main-header{
-    padding:1.5rem 1rem;
+.main-header{    
+    padding: 1.5rem 0;
     background: lightgrey;
     position: relative; 
 }
@@ -37,7 +37,7 @@ a:link{
     color:black;
 }
 a:visited{
-    color:white;
+    color:darkblue;
 }
 a:hover{
     color:yellow;
@@ -52,12 +52,8 @@ a:hover{
     right:1rem;
     display:none;
 }
-.footer{
-    width:12.5rem;
-    background: lightblue;
-    text-align: center;
-    padding:1rem;
-    margin: auto;
+.myButton{
+    text-align: center;    
 }
 
 
@@ -68,7 +64,8 @@ a:hover{
     justify-content: space-between;
 }
 
-.container{
+.container,
+.container_2{
     margin:1rem auto;
     max-width:1200px;
     display:flex;
@@ -91,12 +88,20 @@ a:hover{
 .content{
     text-align: center;
     }
-
+.container_2{
+    display: none;
+}
 /* media queries */
 @media (max-width:799px){
     .main-nav{
+        justify-content: flex-start;
         display:none;
-    }
+        background:white;
+        flex-direction: column;
+        width:50vw;
+        height:100vh;
+        position: fixed;
+        }
     .menu{
         display:inline-block;
     }
@@ -104,7 +109,7 @@ a:hover{
 
 @media (max-width:499px) {
     
-    .container{
+    .container,.container_2{
         flex-direction: column;
     }
     
