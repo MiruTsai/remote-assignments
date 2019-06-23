@@ -23,4 +23,3 @@ exit.addEventListener('click', () => {
     exit.style.display = 'none';
     menu_button.style.display = 'inline-block'
 });
-
