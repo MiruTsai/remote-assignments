@@ -1,4 +1,4 @@
-//assignment1
+/*assignment1*/
 
 function max(...numbers) {   
   var maxNum = 0 ;
@@ -9,3 +9,5 @@ function max(...numbers) {
     }
   return maxNum;
 }
+console.log(max(1, 2, 4, 5));
+console.log(max(5, 2, 7, 1, 6));  
