@@ -1,13 +1,13 @@
 /*assignment2*/
 
-function calculate(action) {
+function calculate(args) {
 
     let result;
 
-    if (action.op === "+") {
-        result = action.n1 + action.n2;
-    } else if (action.op === "-") {
-        result = action.n1 - action.n2;
+    if (args.op === "+") {
+        result = args.n1 + args.n2;
+    } else if (args.op === "-") {
+        result = args.n1 - args.n2;
     } else {
         result = "Not supported";
     }
@@ -15,9 +15,12 @@ function calculate(action) {
     return result;
 }
 
-/*Method1*/
-var action = { op: "+", n1: 2, n2: 1 };
-console.log(calculate(action));
-
-/*Method 2*/
-console.log(calculate({op: "+", n1: 2, n2: 1}));
+class Sum{
+    constructor(op,n1,n2){
+        this.op = op;
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+}
+const add = new Sum("+",2,1);
+console.log(calculate(add));
