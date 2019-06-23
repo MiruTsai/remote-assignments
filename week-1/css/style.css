@@ -7,17 +7,19 @@ body{
     margin:0 auto;
    }
 .main-header{    
-    padding: 1.5rem 0;
+    padding: 0 1.5em;
     background: lightgrey;
-    position: relative; 
+    position: relative;     
+}
+.main-nav{
+    margin: 0;
 }
 .main-nav li{
+    padding-top:1.5rem;
     font-size:1.5rem;
-    color: black;
-    margin-right:10px;
+    color: black;    
 }
 .title{
-    margin: 0;
     padding-left:1rem;
     }
 .welcome{
@@ -46,11 +48,20 @@ a:hover{
 .logo{
     position:absolute;
     left:11rem;
+    bottom:1.3rem;    
+    display:inline-block;
     }
-.menu{
+.menu,
+.exit{
     position: absolute;
     right:1rem;
+    bottom:1.3rem;
     display:none;
+    height:37px;
+}
+.exit{
+    height:29%;
+    z-index: 4;
 }
 .myButton{
     text-align: center;    
@@ -94,10 +105,11 @@ a:hover{
 /* media queries */
 @media (max-width:799px){
     .main-nav{
+        display:none;        
         justify-content: flex-start;
-        display:none;
         background:white;
         flex-direction: column;
+        margin-left: 50vw;
         width:50vw;
         height:100vh;
         position: fixed;
