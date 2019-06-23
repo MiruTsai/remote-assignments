@@ -124,13 +124,11 @@ a:hover{
     .menu{
         display:inline-block;
     }
-
 }
 
 @media (max-width:499px) {
     
     .container,.container_2{
         flex-direction: column;
-    }
-    
+    }   
 }
