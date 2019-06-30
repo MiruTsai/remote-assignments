@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+
+function sumTotal() {
+
+var userNumber =  document.getElementById('userNumber').value;
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        document.getElementById('print').innerHTML = xhr.responseText;        
+    }
+};
+
+xhr.open('GET', 'http://localhost:3000/getData?number=' + userNumber);
+xhr.send();
+};     
+</script>
+</head>
+
+<body>
+    <h2>Please type a number</h2>
+    <form >
+        <input type="text" id="userNumber">
+        <button type="button" onclick="sumTotal()">SUBMIT</button>
+    </form>    
+    <div id="print"></div>
+</body>
+
+
+
+</html>
