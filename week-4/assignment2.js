@@ -18,6 +18,5 @@ function ajax(src, callback){
     xhr.open('GET',src);
     xhr.send();
 }
-
 ajax("https://cwpeng.github.io/live-records-samples/data/products.json", 
 function(response){ render(response); });     
