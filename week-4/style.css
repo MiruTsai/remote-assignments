@@ -1,0 +1,37 @@
+* {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#goods{
+    width:800px;
+}
+h2{
+    margin:5px 0 5px;
+}
+.name{
+    color:white;
+}
+
+.price{
+    color:red;
+    padding:5px 0 10px ; 
+}
+
+.goodList0,
+.goodList1,
+.goodList2{    
+    border-radius: 20px;
+    padding:10px;
+    margin:1rem 20rem 1rem 0rem;
+}
+
+.goodList0{
+    background: #f1d2e7;
+}
+
+.goodList1{
+    background: #b7d3e9;
+}
+
+.goodList2{
+    background: #cee5d5;
+}
