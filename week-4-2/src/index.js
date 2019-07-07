@@ -8,13 +8,6 @@ const Header =(props) => {
     }
 
 
-const Menu = () => {
-    return (
-        <div className="menu">
-            <img src="src/menu.jpg" ></img>
-        </div>
-    )
-}
 const Drink = (props) => {
     return (
         <div className="drink">
@@ -104,7 +97,7 @@ class App extends React.Component {
                         removePlayer = {this.handleRemovePlayer}
                     />
                 )}
-                <Menu />
+                
             </div>
             
             
