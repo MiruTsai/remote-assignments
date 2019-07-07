@@ -11,7 +11,7 @@ const Header =(props) => {
 const Menu = () => {
     return (
         <div className="menu">
-            <img src="menu.jpg" ></img>
+            <img src="src/menu.jpg" ></img>
         </div>
     )
 }
