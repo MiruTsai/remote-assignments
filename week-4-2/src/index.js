@@ -88,7 +88,7 @@ class App extends React.Component {
             <div className="orderDrink">
                 <Header title="Choose your summer favorite drink" totalDrinks={this.state.drinks.length} />
 
-                {/* orderList*/}
+                
                 {this.state.drinks.map(drink =>
                     <Drink
                         name={drink.name}
@@ -96,11 +96,8 @@ class App extends React.Component {
                         key={drink.id.toString()}
                         removePlayer = {this.handleRemovePlayer}
                     />
-                )}
-                
-            </div>
-            
-            
+                )}                
+            </div>            
         );
     }
 }
