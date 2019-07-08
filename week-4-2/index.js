@@ -1,7 +1,3 @@
-import  logo from './logo.png';
-import  exit from './iconfinder_00-ELASTOFONT-STORE-READY_close_2703079.png';
-import  menu from './iconfinder_Menu_4473024.png';
-
 const Header = () => {
     return (
         <header id="TOP" className="main-header">
@@ -12,7 +8,7 @@ const Header = () => {
                 <li><a href="#">item3</a></li>
                 <li><a href="#">item4</a></li>
             </ul>
-        <img id="menu" src={menu} onClick={()=>{
+        {/* <img id="menu" src={menu} onClick={()=>{
             document.getElementById('menu').style.display = 'none';
             document.getElementById('exit').style.display = 'inline-block';
             document.querySelector('.main-nav').style.display = 'flex'}}></img>
@@ -20,7 +16,7 @@ const Header = () => {
             document.getElementById('exit').style.display = 'none';
             document.getElementById('menu').style.display = 'inline-block';
             document.querySelector('.main-nav').style.display = 'none'}}></img>
-        <img id="logo" src={logo}></img>
+        <img id="logo" src={logo}></img> */}
             
         </header>
     )
