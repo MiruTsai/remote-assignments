@@ -39,8 +39,6 @@ class Welcome extends React.Component {
 }
 
 
-
-
 const ContainerTitle = () => {
     return (
         <h2 className="containerTitle">Section Title</h2>
