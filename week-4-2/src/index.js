@@ -1,6 +1,7 @@
-import logo from './logo.png'
-import exit from './iconfinder_00-ELASTOFONT-STORE-READY_close_2703079.png'
-import menu from './iconfinder_Menu_4473024.png'
+import './index.css';
+import logo from './logo.png';
+import exit from './iconfinder_00-ELASTOFONT-STORE-READY_close_2703079.png';
+import menu from './iconfinder_Menu_4473024.png';
 
 const Header = () => {
     return (
