@@ -23,8 +23,7 @@ const Header = () => {
             document.getElementById('exit').style.display = 'none';
             document.getElementById('menu').style.display = 'inline-block';
             document.querySelector('.main-nav').style.display = 'none'}}></img>
-        <img id="logo" src={logo}></img>
-            
+        <img id="logo" src={logo}></img>            
         </header>
     )
 }
