@@ -6,39 +6,58 @@ import exit from './iconfinder_00-ELASTOFONT-STORE-READY_close_2703079.png'
 import menu from './iconfinder_Menu_4473024.png'
 import { NONAME } from 'dns';
 import { assignmentExpression } from '@babel/types';
+import { strictEqual } from 'assert';
+class Header extends React.Component {
+    state = {
+        open: true,
+        className1: "main-nav",
+        className2: "menu",
+        className3: "exit"
+    }
+    changeDisplay = () => {
+        this.setState({
+            open: false,
+            className1: "main-navExpand",
+            className2: "menu-expand",
+            className3: "exit-expand"
+        })
+    }
+    closeMenu = () => {
+        this.setState({
+            open: false,
+            className1: "main-nav",
+            className2: "menu",
+            className3: "exit"
+        })
+    }
 
-const Header = () => {
-    return (
-        <header id="TOP" className="main-header">
-            <h1 className="title">SHOW-U</h1>
-            <ul className="main-nav">
-                <li><a href="#">item1</a></li>
-                <li><a href="#">item2</a></li>
-                <li><a href="#">item3</a></li>
-                <li><a href="#">item4</a></li>
-            </ul>
-        <img id="menu" src={menu} onClick={()=>{
-            document.getElementById('menu').style.display = 'none';
-            document.getElementById('exit').style.display = 'inline-block';
-            document.querySelector('.main-nav').style.display = 'flex'}}></img>
-        <img id="exit" src={exit} onClick={()=>{
-            document.getElementById('exit').style.display = 'none';
-            document.getElementById('menu').style.display = 'inline-block';
-            document.querySelector('.main-nav').style.display = 'none'}}></img>
-        <img id="logo" src={logo}></img>
-            
-        </header>
-    )
+    render() {
+
+        return (
+            <header id="TOP" className="main-header">
+                <h1 className="title">SHOW-U</h1>
+                <ul className={this.state.className1}>
+                    <li><a href="#">item1</a></li>
+                    <li><a href="#">item2</a></li>
+                    <li><a href="#">item3</a></li>
+                    <li><a href="#">item4</a></li>
+                </ul>
+                <img id="logo" src={logo}></img>
+                <img id="menu" src={menu} className={this.state.className2} onClick={this.changeDisplay}></img>
+                <img id="exit" src={exit} className={this.state.className3} onClick={this.closeMenu}></img>
+            </header>
+        )
+    }
 }
 
 class Welcome extends React.Component {
     state = {
-        title : "welcome message"
+        title: "welcome message"
     }
 
-    changeTitle=()=> {
-      this.setState( {
-        title : "Have a good time"
+    changeTitle = () => {
+        this.setState({
+            title: "Have a good time"
         })
     }
     render() {
@@ -53,8 +72,6 @@ class Welcome extends React.Component {
 }
 
 
-
-
 const ContainerTitle = () => {
     return (
         <h2 className="containerTitle">Section Title</h2>
@@ -62,78 +79,72 @@ const ContainerTitle = () => {
 }
 
 class Container extends React.Component {
+    state = {
+        open: true,
+        id: "containers_2"
+    }
+
+    appear = () => {
+        this.setState({
+            open: false,
+            id: "containers_2appear"
+        })
+    }
     render() {
         return (
-            <div className="containers">
-                <div className="first row">
-                    <div>
-                        <p className="content">content one</p>
+            <div>
+                <div className="containers">
+                    <div className="first row">
+                        <div>
+                            <p className="content">content one</p>
+                        </div>
+                    </div>
+                    <div className="second row">
+                        <div>
+                            <p className="content">content two</p>
+                        </div>
+                    </div>
+                    <div className="third row">
+                        <div>
+                            <p className="content">content three</p>
+                        </div>
+                    </div>
+                    <div className="fourth row">
+                        <div>
+                            <p className="content">content four</p>
+                        </div>
+                    </div>
+                    <div className="myButton">
+                        <button onClick={this.appear}>Call more box</button>
                     </div>
                 </div>
-                <div className="second row">
-                    <div>
-                        <p className="content">content two</p>
+                <div id={this.state.id}>
+                    <div className="first row">
+                        <div>
+                            <p className="content">content one</p>
+                        </div>
+                    </div>
+                    <div className="second row">
+                        <div>
+                            <p className="content">content two</p>
+                        </div>
+                    </div>
+                    <div className="third row">
+                        <div>
+                            <p className="content">content three</p>
+                        </div>
+                    </div>
+                    <div className="fourth row">
+                        <div>
+                            <p className="content">content four</p>
+                        </div>
                     </div>
                 </div>
-                <div className="third row">
-                    <div>
-                        <p className="content">content three</p>
-                    </div>
-                </div>
-                <div className="fourth row">
-                    <div>
-                        <p className="content">content four</p>
-                    </div>
-                </div>
-                <button id="myButton" onClick={() => document.getElementById('containers_2').style.display = "flex"}>Call more box</button>          
             </div>
         );
     }
 }
 
-
-    
-
-
-class Containers_2 extends React.Component {
-//     state ={
-//         show :document.getElementById("containers_2").style.display = "none"
-//    }
-//    addMore =()=>{
-//        this.setState({
-//         show :document.getElementById("containers_2").style.display = "flex"
-//        })
-//    }   
-    render() {
-        return (            
-                <div id="containers_2">
-                <div className="first row">
-                    <div>
-                        <p className="content">content one</p>
-                    </div>
-                </div>
-                <div className="second row">
-                    <div>
-                        <p className="content">content two</p>
-                    </div>
-                </div>
-                <div className="third row">
-                    <div>
-                        <p className="content">content three</p>
-                    </div>
-                </div>
-                <div className="fourth row">
-                    <div>
-                        <p className="content">content four</p>
-                    </div>
-                </div>
-                
-                {/* <button id="myButton" onClick={this.addMore}>Call more box</button> */}
-            </div>
-            
-        );
-    }
-}
 
 
 
@@ -144,9 +155,7 @@ class App extends React.Component {
                 <Header />
                 <Welcome />
                 <ContainerTitle />
-                <Container />       
-                <Containers_2 />
-                {/* <Containers_2 show={document.getElementById('containers_2')} />*/}
+                <Container />
             </div>
         );
     }
